@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Contact() {
+function Signup() {
   return (
     <div
     className='text-white'
-    >Contact</div>
+    >Signup page</div>
   )
 }
 
-export default Contact
+export default Signup
