@@ -5,7 +5,7 @@ import Template from '../components/Template'
 import frameImg from '../assets/frame.png'
 
 
-function Signup({setIsloggedIn}) {
+function Signup({setIsLoggedIn}) {
   return (
     <Template 
       title="Join the millions learning to code with studyNotion for free"
@@ -14,7 +14,7 @@ function Signup({setIsloggedIn}) {
       image={signupImg}
       frameImage={frameImg}
       formtype="signup"
-      setIsloggedIn={setIsloggedIn}
+      setIsLoggedIn={setIsLoggedIn}
     />
   )
 }

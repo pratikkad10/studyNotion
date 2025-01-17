@@ -10,7 +10,7 @@ function SignupForm({setIsLoggedIn}) {
 
   const [formData, setFormData]=useState({
     firstName:"", lastName:"", email:"", 
-    password:"", confirmPass:"",
+    password:"", confirmPass:""
   });
 
   function changeHandler(event){

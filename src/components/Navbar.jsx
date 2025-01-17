@@ -1,14 +1,22 @@
 import React from 'react'
-import { NavLink, Route, Routes } from 'react-router-dom'
+import { NavLink, Route, Routes, useNavigate } from 'react-router-dom'
 import Home from '../pages/Home'
 import About from '../pages/About'
 import Contact from '../pages/Contact'
 import Login from '../pages/Login'
 import Signup from '../pages/Signup'
+import { toast } from 'react-toastify'
 
 const Navbar = (props) => {
+  const navigate=useNavigate();
   let isLoggedIn=props.isLoggedIn;
   let setIsLoggedIn=props.setIsLoggedIn;
+
+  function logoutHandler(){
+    toast.success("Successfully Logout!");
+    setIsLoggedIn(false);
+    navigate('/');
+  }
   
   return (
     <div className='flex justify-around items-center p-4 '>
@@ -43,7 +51,9 @@ const Navbar = (props) => {
 
           {
             isLoggedIn &&
-            <button className='px-3 py-2 rounded-md bg-[rgb(23,29,40)] border-[0.7px] hover:bg-gray-600 transition-all delay-150  border-gray-700'>Logout</button>
+            <button
+            onClick={logoutHandler}
+            className='px-3 py-2 rounded-md bg-[rgb(23,29,40)] border-[0.7px] hover:bg-gray-600 transition-all delay-150  border-gray-700'>Logout</button>
           }
 
           {

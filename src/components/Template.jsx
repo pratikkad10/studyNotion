@@ -2,7 +2,7 @@ import React from 'react'
 import SignupForm from './SignupForm'
 import LoginForm from './LoginForm'
 
-function Template({title, desc1, desc2, image, formtype,frameImage, setIsloggedIn}) {
+function Template({title, desc1, desc2, image, formtype,frameImage, setIsLoggedIn}) {
   return (
     <div>
         
@@ -13,7 +13,7 @@ function Template({title, desc1, desc2, image, formtype,frameImage, setIsloggedI
           <p>{desc2}</p>
 
           {
-            formtype === "signup" ? (<SignupForm setIsloggedIn={setIsloggedIn}/>) : (<LoginForm setIsloggedIn={setIsloggedIn}/>)
+            formtype === "signup" ? (<SignupForm setIsLoggedIn={setIsLoggedIn}/>) : (<LoginForm setIsLoggedIn={setIsLoggedIn}/>)
           }
 
           <div>

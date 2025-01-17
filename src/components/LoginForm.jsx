@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 function LoginForm({setIsLoggedIn}) {
-
+    const navigate=useNavigate();
   const [showPassword, setShowPassword]=useState(false);
 
   const [formData, setFormData]=useState(
@@ -28,6 +28,8 @@ function LoginForm({setIsLoggedIn}) {
     e.preventDefault();
     setIsLoggedIn(true);
     toast.success("Logged in successfully!");
+    navigate('/dashboard');
+    
   }
 
   return (

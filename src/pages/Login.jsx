@@ -4,7 +4,7 @@ import Template from '../components/Template'
 import loginImg from '../assets/login.png'
 import frameImg from '../assets/frame.png'
 
-function Login({setIsloggedIn}) {
+function Login({setIsLoggedIn}) {
   return (
     <Template 
       title="welcome Back"
@@ -13,7 +13,7 @@ function Login({setIsloggedIn}) {
       image={loginImg}
       frameImage={frameImg}
       formtype="login"
-      setIsloggedIn={setIsloggedIn}
+      setIsLoggedIn={setIsLoggedIn}
     />
   )
 }
