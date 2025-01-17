@@ -8,6 +8,7 @@ import Signup from './pages/Signup'
 import Home from './pages/Home'
 import Dashboard from './pages/Dashboard'
 import { useState } from 'react'
+import { ToastContainer } from 'react-toastify'
 
 function App() {
 
@@ -16,7 +17,8 @@ function App() {
   return ( 
     <div className='bg-[rgb(0,8,20)] h-screen'>
       <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
-
+      <ToastContainer />
+      
       <Routes>
           <Route path='/' element={<Home />}/>
           <Route path='/about' element={<About />} />

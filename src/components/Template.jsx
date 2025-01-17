@@ -1,19 +1,37 @@
 import React from 'react'
+import SignupForm from './SignupForm'
+import LoginForm from './LoginForm'
 
-function Template() {
+function Template({title, desc1, desc2, image, formtype,frameImage, setIsloggedIn}) {
   return (
     <div>
+        
         <div>
-            <p>Lorem, ipsum.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Sit dolorum eligendi vero repellat adipisci dicta, aut placeat maxime aliquam sint magni sapiente velit labore cupiditate accusantium alias totam eaque natus.
-            </p>
+          <p>{title}</p>
+
+          <p>{desc1}</p>
+          <p>{desc2}</p>
+
+          {
+            formtype === "signup" ? (<SignupForm setIsloggedIn={setIsloggedIn}/>) : (<LoginForm setIsloggedIn={setIsloggedIn}/>)
+          }
+
+          <div>
+            <div></div>
+            <p>OR</p>
+            <div></div>
+          </div>
+
+          <button>Sign in with Google</button>
+
         </div>
 
-        <div>
-            <img src="https://codehelp-router-project.netlify.app/static/media/login.4d877a447365e5137b67.png" alt="" />
-            <img src="https://codehelp-router-project.netlify.app/static/media/frame.3a238e5f26d676376e1d.png" alt="bg-png" />
+        <div className="images">
+          <img src={frameImage} alt="pattern" height={504} width={558} loading='lazy'/>
+          <img src={image} alt="student-image" height={490} width={558} loading='lazy'/>
+
         </div>
+
     </div>
   )
 }
