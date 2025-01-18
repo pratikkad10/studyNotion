@@ -8,16 +8,16 @@ import Signup from './pages/Signup'
 import Home from './pages/Home'
 import Dashboard from './pages/Dashboard'
 import { useState } from 'react'
-import { ToastContainer } from 'react-toastify'
+import { Toaster } from 'react-hot-toast'
 
 function App() {
 
   const [isLoggedIn, setIsLoggedIn]=useState(false);
 
   return ( 
-    <div className='bg-[rgb(0,8,20)] h-screen'>
+    <div className='bg-[rgb(0,8,20)]  min-h-screen  flex flex-col'>
       <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
-      <ToastContainer />
+      <div><Toaster/></div>
 
       <Routes>
           <Route path='/' element={<Home />}/>

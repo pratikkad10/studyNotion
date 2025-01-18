@@ -1,11 +1,6 @@
 import React from 'react'
 import { NavLink, Route, Routes, useNavigate } from 'react-router-dom'
-import Home from '../pages/Home'
-import About from '../pages/About'
-import Contact from '../pages/Contact'
-import Login from '../pages/Login'
-import Signup from '../pages/Signup'
-import { toast } from 'react-toastify'
+import toast, { Toaster } from 'react-hot-toast';
 
 const Navbar = (props) => {
   const navigate=useNavigate();
@@ -19,7 +14,7 @@ const Navbar = (props) => {
   }
   
   return (
-    <div className='flex justify-around items-center p-4 '>
+    <div className='flex justify-between items-center w-11/12 max-w-[1160px] py-4 mx-auto'>
         <img src="https://codehelp-router-project.netlify.app/static/media/Logo.0d90853fa1468dbe2d8d82c0ea06b8b1.svg" width={160} height={32} alt="" />
         
         <ul className='flex items-center justify-center text-[#DBDDEA] gap-4'>

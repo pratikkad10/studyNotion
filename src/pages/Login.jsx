@@ -7,7 +7,7 @@ import frameImg from '../assets/frame.png'
 function Login({setIsLoggedIn}) {
   return (
     <Template 
-      title="welcome Back"
+      title="Welcome Back"
       desc1="Build skills for today, tommorow, and beyond."
       desc2="Education to future-proof your career."
       image={loginImg}
